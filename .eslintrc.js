@@ -24,6 +24,7 @@ module.exports = {
     "react"
   ],
   "rules": {
+    "no-console": 0
     // "linebreak-style": [
     //   "error",
     //   "unix"

@@ -1,41 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
+import store from '../../redux/index/store'
+
 import './index.scss';
-import chosen from ''
-/* eslint-disable */
-// https://reactjs.org/docs/error-boundaries.html
-class Chosen extends React.Component {
-  componentDidMount() {
-    this.$el = $(this.el);
-    this.$el.chosen();
-  }
-
-  componentWillUnmount() {
-    this.$el.chosen('destroy');
-  }
-
-  render() {
-    return (
-      <div>
-        <select className="Chosen-select" ref={el => this.el = el}>
-          {this.props.children}
-        </select>
-      </div>
-    );
-  }
-}
-
-function Example() {
-  return (
-    <Chosen>
-      <option>vanilla</option>
-      <option>chocolate</option>
-      <option>strawberry</option>
-    </Chosen>
-  );
-}
+import  App from '../../containers/index/App'
 
 ReactDOM.render(
-  <Example />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );

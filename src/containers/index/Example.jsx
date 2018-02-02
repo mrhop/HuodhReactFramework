@@ -23,7 +23,6 @@ ExampleContainer.propTypes = {
 
 const mapStateToProps = (state) => ({
   example: state.example,
-
 })
 
 const mapDispatchToProps = {

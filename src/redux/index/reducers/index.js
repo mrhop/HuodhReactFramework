@@ -1,8 +1,7 @@
-import {combineReducers} from 'redux'
 import example from './example'
 
-const indexApp = combineReducers({
+const indexApp = {
   example
-})
+}
 
 export default indexApp

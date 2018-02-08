@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 import Example from '../../components/index/Example'
 import {exampleWelcome} from '../../redux/index/actions'
+import {push} from 'react-router-redux'
 
 class ExampleContainer extends Component {
   render() {
@@ -18,15 +19,21 @@ class ExampleContainer extends Component {
 }
 ExampleContainer.propTypes = {
   example: PropTypes.object.isRequired,
-  exampleWelcome: PropTypes.func
+  exampleWelcome: PropTypes.func,
+  exampleRoute: PropTypes.func
 }
 
-const mapStateToProps = (state) => ({
-  example: state.example,
-})
+const mapStateToProps = (state) => {
+  return {
+    example: state.example,
+  }
+}
 
 const mapDispatchToProps = {
-  exampleWelcome
+  exampleWelcome,
+  exampleRoute: () => {
+    return push('/example2')
+  }
 }
 const ExampleContainerProxy = connect(
   mapStateToProps,

@@ -36,13 +36,15 @@ class Example extends Component {
       Example Name: <input type="input" name="name" onChange={this.handleChange}
                            value={name} ref={(input) => { this.textInput = input; }}/>
       <button onClick={this.exampleWelcome}>do it</button>
+      <button onClick={this.props.exampleRoute}>push to</button>
     </div>
   }
 
 }
 Example.propTypes = {
   example: PropTypes.object.isRequired,
-  exampleWelcome: PropTypes.func
+  exampleWelcome: PropTypes.func,
+  exampleRoute: PropTypes.func
 }
 
 export  default Example

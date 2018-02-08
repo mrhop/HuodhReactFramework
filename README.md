@@ -11,4 +11,6 @@ Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 8+ ✔ |
 MIT
 
 
-route  和css transition的结合
+结合  react react-router redux完成
+
+参照 redux的examples以及react-router的example进行学习

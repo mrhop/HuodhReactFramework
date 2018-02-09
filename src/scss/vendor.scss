@@ -1,4 +1,12 @@
+@import "~compass-mixins/lib/_compass.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss";
 @import "~antd/dist/antd.css";
-body{
+
+// ant-d vars
+//$layout-header-background: #001529;
+
+body {
   background: #fff;
 }
